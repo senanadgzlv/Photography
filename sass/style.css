@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 .navbar-nav .nav-item {
   position: relative;
   cursor: pointer;
@@ -482,7 +486,6 @@
 @media only screen and (max-width: 768px) {
   .clients {
     width: 100%;
-    background-image: url("/img/bg-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
