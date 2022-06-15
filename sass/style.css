@@ -1,0 +1,523 @@
+.navbar-nav .nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-nav .nav-item:hover .submenu {
+  top: 35px;
+  opacity: 1;
+  z-index: 1;
+}
+
+.navbar-nav .nav-item .submenu {
+  z-index: 0;
+  background-color: #333;
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: absolute;
+  top: 60px;
+  width: 220px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar-nav .nav-item .submenu li {
+  list-style: none;
+}
+
+.navbar-nav .nav-item .submenu li a {
+  color: #a7a7a7;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.hero {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero .carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat scroll center scroll;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero .carousel-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+}
+
+.hero .carousel-item .contents {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  line-height: 30px;
+}
+
+.hero .carousel-item .contents .redline {
+  width: 100px;
+  height: 2px;
+  background-color: red;
+  margin-top: 20px;
+}
+
+.hero .carousel-item .contents h2 {
+  font-size: 50px;
+  font-family: Mukta Vaani;
+  -webkit-animation: fadeInLeft 0.5s ease forwards;
+          animation: fadeInLeft 0.5s ease forwards;
+  opacity: 0;
+}
+
+.hero .carousel-item .contents p {
+  font-size: 18px;
+  font-family: Mukta Vaani;
+  -webkit-animation: fadeInLeft 0.5s ease forwards;
+          animation: fadeInLeft 0.5s ease forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.services {
+  width: 100%;
+  background-color: #000;
+}
+
+.services .img {
+  position: relative;
+  width: 436px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.services .img:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.services .img .image__img {
+  display: block;
+  width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.services .img .image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.services .img .image__overlay:hover {
+  opacity: 1;
+}
+
+.services .img .image__overlay h4 {
+  font-size: 35px;
+  font-family: Mukta Vaani;
+}
+
+.services .img .image__overlay p {
+  font-size: 16px;
+  font-family: Mukta Vaani;
+  text-align: center;
+}
+
+.about {
+  width: 100%;
+  background-color: #000;
+}
+
+.about .abt-content h3 {
+  font-size: 35px;
+  font-family: Mukta Vaani;
+  color: #fff;
+}
+
+.about .abt-content p {
+  font-size: 16px;
+  font-family: sans-serif;
+  color: #a7a7a7;
+}
+
+.clients {
+  width: 100%;
+  background-image: url("/img/bg-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.clients .boxs {
+  width: 250px;
+  height: 150px;
+  background: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0.5;
+}
+
+.clients .boxs .boxs-content {
+  color: #fff;
+}
+
+.clients .boxs .boxs-content h3 {
+  font-size: 48px;
+  font-family: Mukta Vaani;
+}
+
+.clients .boxs .boxs-content span {
+  font-size: 15px;
+  font-family: Mukta Vaani;
+}
+
+.nextproject {
+  width: 100%;
+  height: 50vh;
+}
+
+.nextproject .box-img {
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  cursor: pointer;
+}
+
+.nextproject .box-img .contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nextproject .box-img:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.nextproject .box-img img {
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .hero .carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+  .hero .carousel-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+  }
+  .hero .carousel-item .contents {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    line-height: 30px;
+  }
+  .hero .carousel-item .contents .redline {
+    width: 100px;
+    height: 2px;
+    background-color: red;
+    margin-top: 20px;
+  }
+  .hero .carousel-item .contents h2 {
+    font-size: 50px;
+    font-family: Mukta Vaani;
+    -webkit-animation: fadeInLeft 0.5s ease forwards;
+            animation: fadeInLeft 0.5s ease forwards;
+    opacity: 0;
+  }
+  .hero .carousel-item .contents p {
+    font-size: 18px;
+    font-family: Mukta Vaani;
+    -webkit-animation: fadeInLeft 0.5s ease forwards;
+            animation: fadeInLeft 0.5s ease forwards;
+    opacity: 0;
+  }
+  @-webkit-keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-70px);
+              transform: translateX(-70px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-70px);
+              transform: translateX(-70px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @-webkit-keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    width: 100%;
+    background-color: #000;
+  }
+  .services .img {
+    position: relative;
+    width: 650px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .services .img:hover img {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .services .img .image__img {
+    display: block;
+    width: 100%;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services .img .image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services .img .image__overlay:hover {
+    opacity: 1;
+  }
+  .services .img .image__overlay h4 {
+    font-size: 35px;
+    font-family: Mukta Vaani;
+  }
+  .services .img .image__overlay p {
+    font-size: 16px;
+    font-family: Mukta Vaani;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .clients {
+    width: 100%;
+    background-image: url("/img/bg-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .clients .boxs {
+    width: 700px;
+    height: 150px;
+    background: #333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    opacity: 0.5;
+  }
+  .clients .boxs .boxs-content {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .clients .boxs .boxs-content h3 {
+    font-size: 48px;
+    font-family: Mukta Vaani;
+  }
+  .clients .boxs .boxs-content span {
+    font-size: 15px;
+    font-family: Mukta Vaani;
+  }
+}
+/*# sourceMappingURL=style.css.map */

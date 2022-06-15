@@ -1,0 +1,475 @@
+
+
+html{
+    overflow-x: hidden;
+}
+//Navbar
+.navbar-nav{
+    .nav-item{
+    
+        position: relative;
+        cursor: pointer;
+        &:hover .submenu{
+            top: 35px;
+            opacity: 1;
+            z-index: 1;
+        }
+        .submenu{
+            z-index: 0;
+        
+            background-color: #333;
+           transition: 1s;
+            position: absolute;
+            top: 60px;
+            width: 220px;
+            
+            opacity: 0;
+            display: flex;
+            flex-direction: column;   
+            li{
+                list-style: none;
+                a{
+                    color: #a7a7a7;
+                    line-height: 40px;
+                    text-decoration: none;
+                }
+            } 
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    .carousel-item{
+        height: 100vh;
+        min-height: 300px;
+        background: no-repeat scroll center scroll;
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    
+    &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #000;
+            opacity: 0.5;
+            
+    }
+
+    .contents{
+        position: absolute;
+        top: 300px;
+        left: 0;
+      line-height: 30px;
+
+        .redline{
+            width: 100px;
+            height: 2px;
+            background-color: red;
+            margin-top: 20px;
+        }
+        h2{
+            font-size: 50px;
+            font-family: Mukta Vaani;
+            animation: fadeInLeft 0.5s ease forwards;
+            opacity: 0;
+        }
+        p{
+            font-size: 18px;
+            font-family: Mukta Vaani;
+            animation: fadeInLeft 0.5s ease forwards;
+            opacity: 0;
+        }
+    }
+    }
+}
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+ 
+
+//SERVICES
+.services{
+    width: 100%;
+    
+    background-color: #000;
+
+
+    .img{
+        position: relative;
+        width: 436px;
+       
+        overflow: hidden;
+   cursor: pointer;
+
+        
+        &:hover img{
+            transform: scale(1.5);
+        }
+
+        
+        .image__img{
+            display: block;
+            width: 100%;
+            transition: 1s;
+    
+          
+        }
+        .image__overlay{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+    opacity: 0;
+    transition: 1s;
+    &:hover{
+        opacity: 1;
+      
+    }
+    h4{
+        font-size: 35px;
+        font-family: Mukta Vaani;
+    }
+    p{
+        font-size: 16px;
+        font-family: Mukta Vaani;
+        text-align: center;
+    }
+        }
+    }
+    
+}
+
+//About
+
+.about{
+    width: 100%;
+    
+    background-color: #000;
+
+    .abt-content{
+        h3{
+            font-size: 35px;
+            font-family: Mukta Vaani;
+            color: #fff;
+        }
+        p{
+            font-size: 16px;
+            font-family: sans-serif;
+            color: #a7a7a7;
+        }
+    }
+}
+
+
+//Clients
+.clients{
+    width: 100%;
+
+    background-image: url('img/bg-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    .boxs{
+        width: 250px;
+        height: 150px;
+        background: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.5;
+        
+
+        .boxs-content{
+            color: #fff;
+            
+            h3{
+                font-size: 48px;
+                font-family: Mukta Vaani;
+           
+            }
+            span{
+                font-size: 15px;
+                font-family: Mukta Vaani;
+               
+            }
+        }
+       
+    }
+
+}
+
+//Next project
+.nextproject{
+    width: 100%;
+     height: 50vh;
+      
+        .box-img{
+            overflow: hidden;
+            width: 100%;
+            height: 50vh;
+            position: relative;
+            cursor: pointer;
+         
+
+            .contents{
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.6);
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &:hover img{
+             
+                transform: scale(1.2);
+                
+            }
+           
+            img{
+                transition: 1s;
+                width: 100%;
+            }
+        }
+
+        
+    
+}
+
+@media only screen and (max-width: 768px){
+    .hero{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        .carousel-item{
+            height: 100vh;
+            min-height: 300px;
+            background: no-repeat scroll center scroll;
+        -webkit-background-size:cover;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        
+        &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: #000;
+                opacity: 0.5;
+                
+        }
+    
+        .contents{
+            position: absolute;
+            top: 100px;
+            left: 0;
+          line-height: 30px;
+    
+            .redline{
+                width: 100px;
+                height: 2px;
+                background-color: red;
+                margin-top: 20px;
+            }
+            h2{
+                font-size: 50px;
+                font-family: Mukta Vaani;
+                animation: fadeInLeft 0.5s ease forwards;
+                opacity: 0;
+            }
+            p{
+                font-size: 18px;
+                font-family: Mukta Vaani;
+                animation: fadeInLeft 0.5s ease forwards;
+                opacity: 0;
+            }
+        }
+        }
+    }
+    @keyframes fadeInLeft{
+        0%{
+            opacity: 0;
+            transform: translateX(-70px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+    @keyframes fadeInRight{
+        0%{
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+     
+}
+
+@media only screen and (max-width: 768px){
+    .services{
+        width: 100%;
+        
+        background-color: #000;
+    
+    
+        .img{
+            position: relative;
+            width: 650px;
+           
+            overflow: hidden;
+       cursor: pointer;
+    
+            
+            &:hover img{
+                transform: scale(1.5);
+            }
+    
+            
+            .image__img{
+                display: block;
+                width: 100%;
+                transition: 1s;
+        
+              
+            }
+            .image__overlay{
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.6);
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        opacity: 0;
+        transition: 1s;
+        &:hover{
+            opacity: 1;
+          
+        }
+        h4{
+            font-size: 35px;
+            font-family: Mukta Vaani;
+        }
+        p{
+            font-size: 16px;
+            font-family: Mukta Vaani;
+            text-align: center;
+        }
+            }
+        }
+        
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .clients{
+        width: 100%;
+    
+        background-image: url('/img/bg-1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    
+        .boxs{
+            width: 700px;
+            height: 150px;
+            background: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.5;
+          
+            
+    
+            .boxs-content{
+                color: #fff;
+                margin-bottom: 30px;
+          
+                
+                h3{
+                    font-size: 48px;
+                    font-family: Mukta Vaani;
+               
+                }
+                span{
+                    font-size: 15px;
+                    font-family: Mukta Vaani;
+                   
+                }
+            }
+         
+           
+        }
+    
+    }
+}
+
+
