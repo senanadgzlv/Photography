@@ -234,7 +234,8 @@ html {
 
 .clients {
   width: 100%;
-  background-image: url("/img/bg-1.jpg");
+  height: 50vh;
+  background-image: url("img/bg-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
